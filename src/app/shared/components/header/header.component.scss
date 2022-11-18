@@ -8,13 +8,13 @@ header {
 
   background-color: $bg-color;
 
-  height: 69px;
-  padding: 0 32px;
+  height: 4.3125rem;
+  padding: 0 2rem;
 
   .logo {
     img {
       margin: 0;
-      width: 25px;
+      width: 1.5625rem;
     }
   }
   .menu {
@@ -30,7 +30,7 @@ header {
         font-weight: 400;
         color: $menu-color;
 
-        padding-right: 50px;
+        padding-right: 3.125rem;
 
         &:last-child {
           padding-right: 0;
@@ -42,16 +42,16 @@ header {
 
         &:before {
           content: "";
-          width: 10px;
-          height: 10px;
+          width: 0.625rem;
+          height: 0.625rem;
 
-          border: 2px solid $menu-color;
+          border: 0.125rem solid $menu-color;
           border-radius: 50%;
 
           box-sizing: border-box;
 
-          top: calc(50% - 5px);
-          right: 20px;
+          top: calc(50% - 0.3125rem);
+          right: 1.25rem;
 
           position: absolute;
         }

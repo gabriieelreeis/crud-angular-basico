@@ -1,0 +1,72 @@
+<app-breadcrumb title="Lista"></app-breadcrumb>
+<div id="list-users">
+  <div class="container">
+    <h1 class="page-title">Lista de Clientes</h1>
+
+    <div class="form-group">
+      <label class="label" for="search">Nome do cliente</label>
+      <input
+        type="email"
+        class="input"
+        id="search"
+        placeholder="Digite seu nome"
+        (keyup)="onChangeSearch($event)"
+      />
+    </div>
+
+    <div class="list">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Cpf</th>
+            <th>Criado em</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngIf="!!userList">
+            <tr *ngFor="let user of userList; let i = index">
+              <td>{{ user.name }}</td>
+              <td>{{ user.email }}</td>
+              <td>{{ user.cpf }}</td>
+              <td>
+                {{ user.created_at || null | dateBr }}
+
+                <div class="actions">
+                  <ul>
+                    <li><img src="/assets/pen.svg" /></li>
+                    <li (click)="removeUser(i)">
+                      <img src="/assets/trash.svg" />
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr class="new">
+              <td>Exemplo de nome</td>
+              <td>exemplo@mail.com</td>
+              <td>000.000.000-00</td>
+              <td>
+                00/00/0000
+
+                <div class="actions">
+                  <ul>
+                    <li routerLink="/user/create">
+                      <img src="/assets/plus.svg" />
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          </ng-container>
+          <ng-container *ngIf="!userList.length">
+            <tr>
+              <td colspan="4">Nenhum resultado encontrado...</td>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

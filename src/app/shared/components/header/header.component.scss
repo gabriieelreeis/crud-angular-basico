@@ -1,0 +1,65 @@
+@import "../../../shared/scss/variables";
+
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: $bg-color;
+
+  height: 69px;
+  padding: 0 32px;
+
+  .logo {
+    img {
+      margin: 0;
+      width: 25px;
+    }
+  }
+  .menu {
+    ul {
+      list-style: none;
+      li {
+        position: relative;
+
+        display: inline-block;
+        cursor: pointer;
+
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        color: $menu-color;
+
+        padding-right: 50px;
+
+        &:last-child {
+          padding-right: 0;
+
+          &::before {
+            display: none;
+          }
+        }
+
+        &:before {
+          content: "";
+          width: 10px;
+          height: 10px;
+
+          border: 2px solid $menu-color;
+          border-radius: 50%;
+
+          box-sizing: border-box;
+
+          top: calc(50% - 5px);
+          right: 20px;
+
+          position: absolute;
+        }
+
+        &.active {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

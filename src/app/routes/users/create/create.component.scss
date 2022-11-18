@@ -1,0 +1,41 @@
+@import "../../../shared/scss/variables";
+
+#create-user {
+  padding: 50px 0;
+
+  .page-title,
+  .label {
+    font-size: 24px;
+    font-weight: 700;
+    color: $title-color;
+
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid #eef3f7;
+  }
+
+  .label,
+  .input {
+    color: $pg-color;
+    font-weight: 400;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+  }
+
+  .input {
+    width: 100%;
+    font-size: 18px;
+
+    border-radius: 6px;
+
+    background-color: $input-bg;
+    border: none;
+
+    padding: 20px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@import "../../../shared/scss/variables";
+
+.breadcrumb {
+  background-color: $bg-breadcrumb;
+
+  height: 137px;
+
+  display: flex;
+  align-items: center;
+
+  h1 {
+    font-size: 64px;
+    font-weight: 400;
+    color: $color-breadcrumb;
+  }
+}

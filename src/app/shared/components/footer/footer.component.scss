@@ -2,15 +2,15 @@
 
 footer {
   background-color: $bg-color;
-  padding: 0 32px;
-  height: 137px;
+  padding: 0 2rem;
+  height: 8.5625rem;
 
   display: flex;
   align-items: center;
 
   h1 {
     color: $footer-color;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
   }
 }

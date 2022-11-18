@@ -1,18 +1,18 @@
 @import "../../../shared/scss/variables";
 
 #create-user {
-  padding: 50px 0;
+  padding: 3.125rem 0;
 
   .page-title,
   .label {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
     color: $title-color;
 
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.25rem;
 
-    border-bottom: 1px solid #eef3f7;
+    border-bottom: 0.0625rem solid #eef3f7;
   }
 
   .label,
@@ -20,7 +20,7 @@
     color: $pg-color;
     font-weight: 400;
     padding-bottom: 0;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
   }
 
   .label {
@@ -29,16 +29,16 @@
 
   .input {
     width: 100%;
-    font-size: 18px;
+    font-size: 1.125rem;
 
-    border-radius: 6px;
+    border-radius: 0.375rem;
 
     background-color: $input-bg;
     border: none;
 
-    padding: 20px;
+    padding: 1.25rem;
 
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 
     &:focus {
       outline: none;
@@ -46,28 +46,28 @@
   }
 
   .form-check-input {
-    margin-bottom: 50px;
+    margin-bottom: 3.125rem;
   }
 
   .button {
     background-color: $title-color;
     color: white;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.5rem;
 
     text-transform: uppercase;
 
-    border-radius: 8px;
+    border-radius: 0.5rem;
     border: none;
 
-    padding: 15px 25px;
+    padding: 0.9375rem 1.5625rem;
 
-    margin: 10px 0;
+    margin: 0.625rem 0;
   }
 
   .divisor {
-    margin: 20px 0;
+    margin: 1.25rem 0;
     position: relative;
-    border-bottom: 1px solid #eef3f7;
+    border-bottom: 0.0625rem solid #eef3f7;
   }
 }

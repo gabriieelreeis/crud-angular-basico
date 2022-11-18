@@ -36,7 +36,7 @@ export class UsersService {
       {
         name: 'Gabriel',
         email: 'gabriel@email.com',
-        cpf: 123,
+        cpf: 12345678912,
         address: '',
         state: '',
         cep: '',
@@ -46,7 +46,7 @@ export class UsersService {
       {
         name: 'Filipe',
         email: 'flipe@email.com',
-        cpf: 123,
+        cpf: 12345678912,
         address: '',
         state: '',
         cep: '',
@@ -56,7 +56,7 @@ export class UsersService {
       {
         name: 'Renato',
         email: 'renato@email.com',
-        cpf: 123,
+        cpf: 12345678912,
         address: '',
         state: '',
         cep: '',
@@ -66,7 +66,7 @@ export class UsersService {
       {
         name: 'Alex',
         email: 'alex@email.com',
-        cpf: 123,
+        cpf: 12345678912,
         address: '',
         state: '',
         cep: '',
@@ -76,7 +76,7 @@ export class UsersService {
       {
         name: 'Douglas',
         email: 'douglas@email.com',
-        cpf: 123,
+        cpf: 12345678912,
         address: '',
         state: '',
         cep: '',
@@ -86,7 +86,7 @@ export class UsersService {
       {
         name: 'Pablo',
         email: 'pablo@email.com',
-        cpf: 123,
+        cpf: 12345678912,
         address: '',
         state: '',
         cep: '',

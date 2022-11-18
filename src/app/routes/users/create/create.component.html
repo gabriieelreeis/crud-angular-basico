@@ -1,7 +1,7 @@
 <app-breadcrumb title="Cadastro"></app-breadcrumb>
 <div id="create-user">
   <div class="container">
-    <form [formGroup]="createForm">
+    <form [formGroup]="createForm" (submit)="onSubmit()">
       <div class="form-group">
         <label class="label" for="name">Nome</label>
         <input
@@ -85,29 +85,108 @@
       <br />
       <h1 class="page-title">Forma de pagamento</h1>
       <div class="row">
+        <div class="col-3">
+          <div class="form-check">
+            <input
+              formControlName="payment_type"
+              class="form-check-input"
+              type="radio"
+              id="card"
+              value="credit_card"
+            />
+            <label class="label" for="card"> Cartão de Crédito</label>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-check">
+            <input
+              disabled
+              class="form-check-input"
+              type="radio"
+              id="billet"
+              value="billet"
+            />
+            <label class="label" for="billet"> Boleto Bancário</label>
+          </div>
+        </div>
+
         <div class="col-6">
           <div class="form-group">
-            <label class="label" for="search">Nome do cliente</label>
+            <label class="label" for="card_name">Nome impresso no cartão</label>
             <input
-              type="email"
+              formControlName="card_name"
+              type="text"
               class="input"
-              id="search"
-              placeholder="Digite seu nome"
+              id="card_name"
+              placeholder="Nome impresso no cartão"
             />
           </div>
         </div>
         <div class="col-6">
           <div class="form-group">
-            <label class="label" for="search">Nome do cliente</label>
+            <label class="label" for="card_expiration">Data de Expiração</label>
+            <div class="row">
+              <div class="col-6">
+                <select
+                  formControlName="card_month"
+                  class="input"
+                  id="card_expiration"
+                >
+                  <option value="">Mês</option>
+                  <option value="{{ month }}" *ngFor="let month of months">
+                    {{ month }}
+                  </option>
+                </select>
+              </div>
+              <div class="col-6">
+                <select
+                  formControlName="card_year"
+                  class="input"
+                  id="card_expiration"
+                >
+                  <option value="">Ano</option>
+                  <option value="{{ year }}" *ngFor="let year of years">
+                    {{ year }}
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="form-group">
+            <label class="label" for="card_number">Número do Cartão</label>
             <input
-              type="email"
+              formControlName="card_number"
+              type="text"
               class="input"
-              id="search"
-              placeholder="Digite seu nome"
+              id="card_number"
+              placeholder="0000 0000 0000 0000"
+              mask="0000 0000 0000 0000"
+            />
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="form-group">
+            <label class="label" for="ccv">Código de Segurança</label>
+            <input
+              formControlName="card_ccv"
+              type="text"
+              class="input"
+              id="ccv"
+              placeholder="XXX"
+              mask="000"
             />
           </div>
         </div>
       </div>
+
+      <div class="divisor"></div>
+
+      <p class="label">Seu cartão será debitado em R$49,00</p>
+      <button type="submit" class="button">Realizar Matrícula</button>
+      <p class="description">Informações seguras e criptografadas</p>
     </form>
   </div>
 </div>

@@ -10,27 +10,7 @@ export class UsersService {
 
   constructor() {
     this.loadListFromLocalStorage();
-
-    // this.createUser({
-    //   name: 'Gaabriel',
-    //   email: 'gabriel',
-    //   cpf: 123,
-    //   address: '',
-    //   state: '',
-    //   cep: '',
-    //   city: '',
-    //   created_at: new Date(),
-    // });
-    // this.createUser({
-    //   name: 'Renato',
-    //   email: 'gabriel',
-    //   cpf: 123,
-    //   address: '',
-    //   state: '',
-    //   cep: '',
-    //   city: '',
-    //   created_at: new Date(),
-    // });
+    this.generateInitialList();
   }
 
   createUser(userInfos: UserDto) {
@@ -49,6 +29,74 @@ export class UsersService {
 
     const storage = JSON.stringify(users);
     localStorage.setItem('list', storage);
+  }
+
+  generateInitialList() {
+    const list: UserDto[] = [
+      {
+        name: 'Gabriel',
+        email: 'gabriel@email.com',
+        cpf: 123,
+        address: '',
+        state: '',
+        cep: '',
+        city: '',
+        created_at: new Date(),
+      },
+      {
+        name: 'Filipe',
+        email: 'flipe@email.com',
+        cpf: 123,
+        address: '',
+        state: '',
+        cep: '',
+        city: '',
+        created_at: new Date(),
+      },
+      {
+        name: 'Renato',
+        email: 'renato@email.com',
+        cpf: 123,
+        address: '',
+        state: '',
+        cep: '',
+        city: '',
+        created_at: new Date(),
+      },
+      {
+        name: 'Alex',
+        email: 'alex@email.com',
+        cpf: 123,
+        address: '',
+        state: '',
+        cep: '',
+        city: '',
+        created_at: new Date(),
+      },
+      {
+        name: 'Douglas',
+        email: 'douglas@email.com',
+        cpf: 123,
+        address: '',
+        state: '',
+        cep: '',
+        city: '',
+        created_at: new Date(),
+      },
+      {
+        name: 'Pablo',
+        email: 'pablo@email.com',
+        cpf: 123,
+        address: '',
+        state: '',
+        cep: '',
+        city: '',
+        created_at: new Date(),
+      },
+    ];
+
+    if (!this.usersList.getValue().length)
+      list.forEach((u) => this.createUser(u));
   }
 
   private loadListFromLocalStorage() {

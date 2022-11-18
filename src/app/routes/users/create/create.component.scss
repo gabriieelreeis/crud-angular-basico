@@ -23,6 +23,10 @@
     margin-bottom: 10px;
   }
 
+  .label {
+    border-bottom: none;
+  }
+
   .input {
     width: 100%;
     font-size: 18px;
@@ -34,8 +38,36 @@
 
     padding: 20px;
 
+    margin-bottom: 20px;
+
     &:focus {
       outline: none;
     }
+  }
+
+  .form-check-input {
+    margin-bottom: 50px;
+  }
+
+  .button {
+    background-color: $title-color;
+    color: white;
+    font-weight: 400;
+    font-size: 24px;
+
+    text-transform: uppercase;
+
+    border-radius: 8px;
+    border: none;
+
+    padding: 15px 25px;
+
+    margin: 10px 0;
+  }
+
+  .divisor {
+    margin: 20px 0;
+    position: relative;
+    border-bottom: 1px solid #eef3f7;
   }
 }
